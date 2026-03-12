@@ -22,14 +22,25 @@ def generate_list(n, l) :
         l.append(n) # "append" aggiunge il numero alla lista 
     return l
 def analizza_sequenza(l) : 
-    return sum(l) #somma gli elementi della lista 
+    s = sum(l)
+    lenght = len(l)
+    m = max(l)
+    return print("la somma è: ", s, " la lunghezza è: ", lenght, " il valore massimo è: ", m)
+def ricerca(l) : 
+    for n in l: 
+        if (n%5 == 0) :
+            print(n)
+    else :
+        print("nella lista non copare nessun elemento divisibile per 5")
+
 def main(): 
     result = int((input("scrivi un numero: ")))
     print(is_pari(result))
     print(positive_value(result))
     l = [result]
     print(generate_list(result, l))
-    print(analizza_sequenza(l))
+    analizza_sequenza(l)
+    ricerca(l)
 
 main()
 
