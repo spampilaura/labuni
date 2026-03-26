@@ -19,3 +19,9 @@ The death-fires danced at night;
 The water, like a witch's oils,
 Burnt green, and blue and white.
 '''
+count = 0
+for line in testo.splitlines() : 
+    if(line.strip()) :
+        count +=1
+print(count)
+print(len(testo))
