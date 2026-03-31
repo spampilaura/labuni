@@ -22,7 +22,9 @@ Burnt green, and blue and white.
 
 
 count = 0
-for line in testo.split('\n') : 
+a = testo.split('\n')
+print(len(a))
+for line in a : 
     if len(line) > 0 : 
         count +=1
 print("il numero delle righe è: ", count)
