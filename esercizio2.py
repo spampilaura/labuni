@@ -19,9 +19,12 @@ The death-fires danced at night;
 The water, like a witch's oils,
 Burnt green, and blue and white.
 '''
+
+
 count = 0
-for line in testo.splitlines() : 
-    if(line.strip()) :
+for line in testo.split('\n') : 
+    if len(line) > 0 : 
         count +=1
-print(count)
-print(len(testo))
+print("il numero delle righe è: ", count)
+    #count +=1
+#print( "il numero di parole è: ", count)
