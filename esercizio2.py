@@ -23,7 +23,7 @@ Burnt green, and blue and white.
 
 count1 = 0 # count righe 
 count2 = 0 # count parole
-
+count3 = 0
 a = testo.split('\n') # divide il testo quando trova un a capo 
 print(len(a))
 for line in a : 
@@ -31,7 +31,9 @@ for line in a :
         count1 += 1 # aggiungi 1 
         words = line.split() # divide la linea quando trova uno spazio (per restituire una lista con parole)
         count2 +=len(words) # len(words) conta elementi che ci sono in "words"
+        for c in line :
+            if c.isalnum() : # controlla se è un carattere alfanumerico, true se contiene solo lettere/numeri, false se contiene altro
+                count3 += 1
 print("il numero delle righe è: ", count1)
 print("il numero delle parole è: ", count2)
-    #count +=1
-#print( "il numero di parole è: ", count)
+print("il numero di caratteri é: ", count3)
