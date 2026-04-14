@@ -34,6 +34,7 @@ for line in a :
         for c in line :
             if c.isalnum() : # controlla se è un carattere alfanumerico, true se contiene solo lettere/numeri, false se contiene altro
                 count3 += 1
-print("il numero delle righe è: ", count1)
-print("il numero delle parole è: ", count2)
-print("il numero di caratteri é: ", count3)
+print("Il numero delle righe è: ", count1)
+print("Il numero delle parole è: ", count2)
+print("Il numero di caratteri é: ", count3)
+print(input("Inserisci una lettera: "))
