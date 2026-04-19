@@ -3,12 +3,13 @@ bello
 ciao 
 
 9 . 
-a
+ciao
 fiocco 
 day
 
 s
 jnd
+ciao
 '''
 # in maiuscolo bello, 9 . , fiocco 
 
@@ -67,14 +68,26 @@ print("Il testo riscritto invertendo l'ordine delle frasi: \n", testo)
 testo = testo_originale
 a = testo.split('\n')
 for i in range(len(a)) :
-    if a[i] == "" :
-        verso = 0
+    if a[i] == "" : # quando trova un a capo 
+        verso = 0 
     else : 
         verso += 1
 
-        if verso == 2 :  
+        if verso == 2 :  # se il verso è il seocondo si fa il calcolo per scrivere a specchio 
             t = list(a[i])
             t.reverse()
             a[i] = "".join(t)
 testo = "\n".join(a)
 print("Il testo riscritto con il secondo verso di ogni strofa scritto a specchio: \n", testo)
+
+# punto 9) 
+testo = testo_originale
+strofe = testo.split('\n\n')
+prima = strofe[0].split() 
+for parola in prima : 
+    p = True 
+    for i in range(1, len(strofe)) : 
+        if parola not in strofe[i].split(): 
+            p = False 
+    if p == True :
+        print("La parole o le parole presenti in tutte le strofe sono : ", parola)
