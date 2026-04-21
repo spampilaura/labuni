@@ -15,7 +15,30 @@ rubrica = {
 'Madoka Ayukawa': {'giorno': 25, 'mese': 'maggio', 'anno': 1969, 'età': 57, 'sesso': 'F', 'mail': 'madoka_sax@asahi_net.jp'}
 }
 
-# punto1) 
+# punto1) visualizzare la rubrica cin ke chisvi e i valori 
+print("Punto 1: visualizzare il contenuto del dizionario")
 for el in rubrica.keys() : 
-  for el2 in rubrica.values() : 
-    print(el, el2)
+  print(el, end=" ") # end permette di non mandare a capo il print 
+  for el2 in rubrica[el].keys() : 
+    print(el2, ":", rubrica[el][el2], end=" ") 
+  print() # manda a capo quando inizia un altra key della rubrica 
+
+# punto 2) creare lista dell'età in ordine crescente e visualizzare i nomi in base alla lista 
+lista_eta = []
+print()
+print("Punto2: visualizzare i nomi in base all'ordine dell'età crescente")
+for eta in rubrica.keys() : 
+  lista_eta.append(rubrica[eta]["età"]) #aggiunge alla lista gli elementi della rubrica dove trova scritto età
+  lista_eta.sort() #per mettere la lista in ordine crescente 
+for v in lista_eta : 
+  for nome in rubrica.keys() : 
+    if rubrica[nome]["età"] == v : 
+      print(nome, end =" ")
+print()
+
+# punto 3) invertire l'ordine della lista e visulizzarla 
+print()
+print("Punto 3: visualizzare la lista creata in ordine crescente dell'età, in ordine decrescente: ")
+print("Lista crescente: ", lista_eta)
+lista_eta.reverse() #cambia l'ordine degli elementi nella lista 
+print("Lista decrescente: ", lista_eta)
