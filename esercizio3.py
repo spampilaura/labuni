@@ -43,13 +43,18 @@ print("Lista crescente: ", lista_eta)
 lista_eta.reverse() #cambia l'ordine degli elementi nella lista 
 print("Lista decrescente: ", lista_eta)
 
-# punto 4) 
+# punto 4) per ogni membro della rubrica definire un messaggio 
+print() 
+print("Punto 4: visualizzare un messaggio per ogni membro")
 c = " " 
+count = 0 
 for nome in rubrica.keys() : 
+    count += 1 
     if rubrica[nome]["sesso"] == "M" : 
       c = "o"
     else :
       c = "a"
-    print("Car",c, nome, ",")
-    print("sei nat",c, "il", rubrica[nome]["giorno"], "di", rubrica[nome]["mese"], "del", rubrica[nome]["anno"], "e quindi a breve compirai", rubrica[nome]["età"], "anni.")
-    print("Ti manderemo gli auguri a ", rubrica[nome]["mail"])
+    print(f"{count}° :")
+    print(f"Car{c} {nome},")
+    print(f"sei nat{c} il {rubrica[nome]["giorno"]} di {rubrica[nome]["mese"]} del {rubrica[nome]["anno"]} e quindi a breve compirai {rubrica[nome]["età"]} anni.")
+    print(f"Ti manderemo gli auguri a {rubrica[nome]["mail"]}")
