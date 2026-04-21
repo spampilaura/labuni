@@ -42,3 +42,14 @@ print("Punto 3: visualizzare la lista creata in ordine crescente dell'età, in o
 print("Lista crescente: ", lista_eta)
 lista_eta.reverse() #cambia l'ordine degli elementi nella lista 
 print("Lista decrescente: ", lista_eta)
+
+# punto 4) 
+c = " " 
+for nome in rubrica.keys() : 
+    if rubrica[nome]["sesso"] == "M" : 
+      c = "o"
+    else :
+      c = "a"
+    print("Car",c, nome, ",")
+    print("sei nat",c, "il", rubrica[nome]["giorno"], "di", rubrica[nome]["mese"], "del", rubrica[nome]["anno"], "e quindi a breve compirai", rubrica[nome]["età"], "anni.")
+    print("Ti manderemo gli auguri a ", rubrica[nome]["mail"])
