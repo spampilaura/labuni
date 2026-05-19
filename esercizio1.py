@@ -12,7 +12,7 @@ def positive_value() :
             n = int(input("Numero non valido. Inserisci un numero intero positivo: "))
         return n
 
-# punto 3) num. pari // 2, num. diversi *3+1, la lista finisce quando arriva a 1 oppure a 100 elementi
+''' punto 3) num. pari // 2, num. diversi *3+1, la lista finisce quando arriva a 1 oppure a 100 elementi '''
 def generate_list(n) :
     nstart = n 
     l = [n] # creo la lista 
@@ -25,13 +25,13 @@ def generate_list(n) :
     print("La lista per il numero", nstart, "è: ", l) # stampa la lista generata dal numero iniziale 
     return l
 
-# punto 4) somma, lunghezza e numero più grande della lista
+''' punto 4) somma, lunghezza e numero più grande della lista '''
 def analizza_sequenza(l) : 
     s = sum(l) #la somma della lista
     length = len(l) # la lunghezza della lista
     m = max(l) # il numero più grande
     return m, length, s
-# punto 5) se la lista contiene un numero divisibile per 5 restituisce il numero, senno print frase di spiegazione
+''' punto 5) se la lista contiene un numero divisibile per 5 restituisce il numero, senno print frase di spiegazione '''
 def div5(l) : 
     t = False 
     print("I numeri divisibili per 5 sono:", end =" ")
@@ -44,6 +44,7 @@ def div5(l) :
     else : 
         print() # va a capo dopo la stampa (messo soltanto per un fattore estetico)
 
+''' punto 6) main '''
 def main(): 
     print("In questo programma vengono fatti vari test sui numeri interi per trovare quale numero generi la sequenza più lunga")
     test = int((input("Inserisci un numero, corrispondente al numero di test che vuoi eseguire: ")))
