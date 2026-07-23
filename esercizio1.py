@@ -20,7 +20,7 @@ def is_pari(n) :
 '''  punto 2) ritorna un numero positivo che li da l'utente se non va bene richiederlo '''
 def positive_value() : 
         n = int(input("Inserisci un numero intero positivo: "))
-        while (n < 1) or (not n.isdigit()) : # quando il numero è minore di 1, continua a chiederi il numero fin quando non è positivo
+        while (n < 1) : # se il numero è minore di 1, continua a chiedere il numero fin quando non è positivo
             n = int(input("Numero non valido. Inserisci un numero intero positivo: "))
         return n
 
@@ -30,7 +30,7 @@ def generate_list(n) :
     l = [n] # creo la lista 
     while (n != 1 and len(l) < 100) : # "len" è la lunghezza della lista, "!=" è diverso
         if(is_pari(n)) : # se n è pari, n viene diviso per due 
-            n = n//2 
+            n = n/2 
         else : # se n è dispari, n viene moltiplicato per tre e poi sommato 1 
             n = n*3+1
         l.append(n) # "append" aggiunge il numero alla lista 
@@ -46,7 +46,7 @@ def analizza_sequenza(l) :
 ''' punto 5) se la lista contiene un numero divisibile per 5 restituisce il numero, senno print frase di spiegazione '''
 def div5(l) : 
     t = False 
-    print("I numeri divisibili per 5 sono:", end =" ")
+    print("I numeri divisibili per 5 sono:", end =" ") # end = " " serve ad agggiungere uno spazio alla fine del print
     for n in l: 
         if (n%5 == 0) :
             print(n, end = " ")
@@ -63,17 +63,17 @@ def main():
     max_length = 0 # lunghezza più grand trovata
     num_max = 0 # numero inziale che ha prodotto la sequenza 
     for i in range(test) : 
-        n = positive_value()
-        l = generate_list(n) 
-        m, length, s = analizza_sequenza(l)
+        n = positive_value() # chiede un valore intero positivo
+        l = generate_list(n) # genera la lista a partire da n
+        m, length, s = analizza_sequenza(l) # calcola massimo, lunghezza e somma
         print("Somma:", s)
         print("Lunghezza:", length)
         print("Massimo:", m)
         div5(l)
         
-        if (length > max_length) :
-            max_length = length
-            num_max = n
+        if (length > max_length) : # controlla se è questa è la sequenza più grande trovata fin ora 
+            max_length = length # aggiorna la lunghezza massima
+            num_max = n # salva il num che genera la lunghezza massima 
     print("Il numero con la sequenza più lunga è: ", num_max)
     print("La lunghezza della sequenza è: ", max_length)
 main()
