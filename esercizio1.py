@@ -1,3 +1,15 @@
+#
+# File: esercizio1.py
+#
+# Author: L.Rossi
+#
+# Date: 2026/04/23
+#
+# Version: 1.0
+#
+# Description: Test sui numeri interi positivi
+#
+
 ''' punto 1) ritorna vero se "n" è pari, falso se è "n" dispari '''
 def is_pari(n) :
     if(n%2 == 0) : # se n è pari restituisce il valore true 
@@ -8,7 +20,7 @@ def is_pari(n) :
 '''  punto 2) ritorna un numero positivo che li da l'utente se non va bene richiederlo '''
 def positive_value() : 
         n = int(input("Inserisci un numero intero positivo: "))
-        while (n < 1) : # quando il numero è minore di 1, continua a chiederi il numero fin quando non è positivo
+        while (n < 1) or (not n.isdigit()) : # quando il numero è minore di 1, continua a chiederi il numero fin quando non è positivo
             n = int(input("Numero non valido. Inserisci un numero intero positivo: "))
         return n
 
