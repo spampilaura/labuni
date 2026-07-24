@@ -7,7 +7,7 @@
 #
 # Version: 1.0
 #
-# Description: Test sui numeri interi positivi
+# Description: Manipolazione di un testo attraverso operazioni su stringhe, liste e dizionari.
 #
 testo = '''
 Day after day, day after day,
