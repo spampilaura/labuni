@@ -105,27 +105,27 @@ print("Il testo riscritto con il secondo verso di ogni strofa scritto a specchio
 ''' punto 9) trova le parole che campaiono in tutte le strofe '''
 testo = testo_originale
 strofe = testo.split('\n\n') # divide il testo ogni volta che trova uno spazio (in parole)
- 
+prima = strofe[0].split() # prende le parole della prima strofa
 for parola in prima : 
     p = True 
-    for i in range(1, len(strofe)) : 
-        if parola not in strofe[i].split(): 
+    for i in range(1, len(strofe)) : # controlla le altre strofe
+        if parola not in strofe[i].split(): # quando non è presente
             p = False 
-    if p == True :
+    if p == True : # quando è presente
         print("La parola o le parole presenti in tutte le strofe sono : ", parola)
 
-# punto 10)
+''' punto 10) lista univoca di tutte le parole, ordinata per lunghezza '''
 testo = testo_originale
 a = testo.split()
-l = []
+l = [] # nuova lista dove verranno salvati le parole non ripetute
 for parola in a : 
-    if parola not in l : 
-        l.append(parola) # se "parola" non è già presente nella lista l'aggiunge 
+    if parola not in l : # se "parola" non è già presente nella lista l'aggiunge 
+        l.append(parola) 
 l.sort(key=len) # ordina per la lunghezza di parole la lista
 print("La lista univoca ordina per lunghezza è: ", l) 
 
-# punto 11) 
-testo = testo_originale
+''' punto 11) dizionario che mappi ogni carattere con il suo valore (occorenza) nel testo '''
+testo = testo_originale # ripristina il testo originale
 dizionario = {} # dizionario vuoto 
 for c in testo :  
     if c in dizionario : # se c'è già nel dizionario aumenta il conteggio 
@@ -134,13 +134,13 @@ for c in testo :
         dizionario[c] = 1 
 print("Il dizionario per ogni carattere è: ", dizionario)
 
-# punto 12)  
+''' punto 12) come il punto 11) soltanto i caratteri alfanumerici '''
 testo = testo_originale 
 dizionario2 = {} 
 for c in testo :  
-    if ("a" <= c <= "z" ) or ("A" <= c <= "Z" ) or ("0" <= c <= "9") : 
-        c = c.lower()
-        if c in dizionario2 : 
+    if ("a" <= c <= "z" ) or ("A" <= c <= "Z" ) or ("0" <= c <= "9") : # considera solo da 'a' a 'z', da 'A' a 'Z' e da 0 a 9
+        c = c.lower() # trasforma il carattere in minuscolo
+        if c in dizionario2 :
             dizionario2[c] += 1 
         else : 
             dizionario2[c] = 1 
