@@ -1,3 +1,15 @@
+#
+# File: esercizio3.py
+#
+# Author: L.Rossi
+#
+# Date: 2026/05/23
+#
+# Version: 1.0
+#
+# Description: Manipolazione del dizionario
+#
+import sys 
 rubrica = {
   'Paolino Paperino': {'giorno': 9,
                       'mese': 'giugno',
@@ -15,7 +27,7 @@ rubrica = {
 'Madoka Ayukawa': {'giorno': 25, 'mese': 'maggio', 'anno': 1969, 'età': 57, 'sesso': 'F', 'mail': 'madoka_sax@asahi_net.jp'}
 }
 
-# punto1) visualizzare la rubrica cin ke chisvi e i valori 
+''' punto1) visualizzare la rubrica cin ke chisvi e i valori '''
 print("Punto 1: visualizzare il contenuto del dizionario")
 for el in rubrica.keys() : 
   print(el, end=" ") # end permette di non mandare a capo il print 
@@ -23,7 +35,7 @@ for el in rubrica.keys() :
     print(el2, ":", rubrica[el][el2], end=" ") 
   print() # manda a capo quando inizia un altra key della rubrica 
 
-# punto 2) creare lista dell'età in ordine crescente e visualizzare i nomi in base alla lista 
+''' punto 2) creare lista dell'età in ordine crescente e visualizzare i nomi in base alla lista '''
 lista_eta = []
 print()
 print("Punto2: visualizzare i nomi in base all'ordine dell'età crescente")
@@ -36,14 +48,14 @@ for v in lista_eta :
       print(nome, end =" ")
 print()
 
-# punto 3) invertire l'ordine della lista e visulizzarla 
+''' punto 3) invertire l'ordine della lista e visulizzarla '''
 print()
 print("Punto 3: visualizzare la lista creata in ordine crescente dell'età, in ordine decrescente: ")
 print("Lista crescente: ", lista_eta)
 lista_eta.reverse() #cambia l'ordine degli elementi nella lista 
 print("Lista decrescente: ", lista_eta)
 
-# punto 4) per ogni membro della rubrica definire un messaggio 
+''' punto 4) per ogni membro della rubrica definire un messaggio '''
 print() 
 print("Punto 4: visualizzare un messaggio per ogni membro")
 c = " " 
@@ -58,3 +70,6 @@ for nome in rubrica.keys() :
     print(f"Car{c} {nome},")
     print(f"sei nat{c} il {rubrica[nome]["giorno"]} di {rubrica[nome]["mese"]} del {rubrica[nome]["anno"]} e quindi a breve compirai {rubrica[nome]["età"]} anni.")
     print(f"Ti manderemo gli auguri a {rubrica[nome]["mail"]}")
+
+''' punto 5) '''
+print(sys.argv)

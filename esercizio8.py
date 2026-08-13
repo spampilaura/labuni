@@ -7,7 +7,7 @@
 #
 # Version: 1.0
 #
-# Description: My First Project Program to print "Hello, World!".
+# Description: Gioco dell'impiccato
 #
 import random 
 def gioco_impiccato():
