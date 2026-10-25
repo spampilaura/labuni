@@ -7,7 +7,7 @@
 #
 # Version: 1.0
 #
-# Description: Manipolazione del dizionario
+# Description: Manipolazione del dizionario, creare file testo e JSON
 #
 import sys # importo sys per il punto 5)
 import argparse # importo argparse per il punto 6) 
@@ -106,5 +106,3 @@ if args.punto == 6 : # se l'argomento scritto è --nome esegui
     print(f"Cara {nome}, sei nata il {rubrica[nome]['giorno']} di {rubrica[nome]['mese']} del {rubrica[nome]['anno']} e quindi a breve compirai {rubrica[nome]['età']} anni. Ti manderemo gli auguri a {rubrica[nome]['mail']}")
   else:
       print("Nome non presente nella rubrica")
-
-# riga 76 e riga 83, servono cosi che posso sia eseguire il punto 5) che il punto 6) senza dover commentare uno o l'altro 
