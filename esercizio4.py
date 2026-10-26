@@ -9,6 +9,7 @@
 #
 # Description: Creare file testo e JSON
 #
+import json # per punto 2)
 rubrica = {
   'Paolino Paperino': {'giorno': 9,
                       'mese': 'giugno',
@@ -34,4 +35,14 @@ for nome in rubrica :
 file_testo.close() # chiude il file
 print("Al file sono stati aggiunti tutti gli elementi della rubrica")
 
-''' punto 2) '''
+''' punto 2) creare un file JSON '''
+file_json = open('rubrica.json', 'w') # creo il file scrittura
+print("Il file denominato 'rubrica.json' è stato creato")
+json.dump(rubrica, file_json) # con dump creo il file json 
+file_json.close() 
+
+''' punto 3) leggere la rubrica '''
+with open('rubrica.json', 'r') as in_file:
+    # legge il contenuto del file in un dizionario
+    rubrica = json.load(in_file)
+print(rubrica)
